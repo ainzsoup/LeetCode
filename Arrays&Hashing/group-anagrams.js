@@ -2,6 +2,7 @@
  * @param {string[]} strs
  * @return {string[][]}
  */
+// this code worrks but is slow
 let groupIndex = (str, ret) => {
     for (let i = 0; i < ret.length; i++) {
         if (ret[i][0].split``.sort().join`` == str)
