@@ -13,6 +13,8 @@ public:
         vector<vector<int>> result;
         int n = nums.size() - 1;
         for (int i = 0; i < nums.size(); ++i) {
+			if (nums[i] > 0)
+				break;
             int j = i + 1;
             int k = n;
             while (j < k) {
@@ -28,6 +30,8 @@ public:
                     k--;
             }
         }
-        return vector<vector<int>>(sett.begin(), sett.end());
+		for (auto it = sett.begin(); it != sett.end(); ++it)
+			result.push_back(*it);
+		return result;
     }
 };
